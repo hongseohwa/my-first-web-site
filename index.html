@@ -21,12 +21,14 @@
     text-align: center;
   }
   #grid ol {
+    padding-left: 33px;
+  }
+  ol {
     color: pink;
     border-right: 1px solid gray;
     width: 100px;
     margin: 0;
     padding: 20px;
-    padding-left: 33px;
   }
   #grid {
     display: grid;
@@ -35,6 +37,30 @@
   #article {
     padding-left: 25px;
   }
+  @media(min-width: 1200px) {
+    body {
+      background-color: red;
+    }
+  }
+  @media(max-width: 1200px) {
+    body {
+      background-color: blue;
+    }
+  }
+  @media(max-width: 800px) {
+    #grid {
+      display: block;
+     }
+    ol {
+      border-right: none;
+     }
+    h1 {
+      border-bottom: none;
+     }
+    body {
+      background-color: yellow;
+     }
+   }
 </style>
 </head>
 <body>
@@ -55,18 +81,15 @@
 </ol>
 -->
       <h2>HSH</h2>
-      <h2>2022-12-17</h2>
-      <h3>CSS 스터디 8일차</h3>
+      <h2>2022-12-18</h2>
+      <h3>CSS 스터디 9일차</h3>
       <p>나를 소개하는 웹사이트</p>
-      <p>style영역에 h1 선택자를 추가하여 텍스트 편집</p>
-      <p>테두리 = border, 테두리 두께 = border-width, 테두리 색상 = border-color, 테두리의 스타일(점선인지, 실선인지) 단선인 경우 = border-style: solid;</p>
-      <p>화면 전체를 쓰는 태그들을 block level element, 자기 자신의 콘텐츠 크기만큼 쓰는 태그들은 inline element라고 함</p>
-      <p>',' 선택자를 통해 코드의 양을 획기적으로 줄일 수 있음 </p>
-      <p>콘텐츠와 테두리 사이의 여백은 padding에 값을 줌, 테두리와 테두리 사이의 간격은 margin, 아래쪽 테두리는 border-bottom 사용</p>
-      <p>content, border이 있고 border을 기준으로 안쪽은 padding, 바깥쪽은 margin, 웹 페이지 검사 기능으로 쉽게 확인 가능</p>
-      <p>디자인이란 목적을 위해 어떤 의미도 없는 태그를 div(division) - 블록 레벨 엘리먼트라서 줄바꿈이 됨 < 똑같은 목적으로 고안된 태그가 > span태그 - 인라인 엘리먼트라 목적에 따라 바꿔씀</p>
-      <p>div를 감싸는 부모 태그로 div사용, 부모 태그의 id값을 grid로 지정 후 grid-template-colums 속성 사용</p>
-      <p>이렇게 해서 그리드를 통해 레이아웃을 만들었고 필요 없는 것들을 정리하는 작업을 함</p>
+      <p>반응형 웹, 반응형 웹 디자인(responsive web) - 화면 크기에 따라 웹 페이지의 각 요소들이 반응해서 최적화된 모양으로 바뀌는 것</p>
+      <p>미디어 쿼리 = @media라고 씀 / @media(min-width: 800px) = screen width > 800px</p>
+      <p>미디어 쿼리를 활용하면 특정 조건을 만족할 때만 미디어 쿼리의 코드를 동작시키는 것이 가능</p>
+      <p>위 코드 해석은 800픽셀보다 작을 때, grid부분을 grid부분이 아니게끔 display: block; 로 만듬</p>
+      <p>800픽셀보다 작을 때, ol태그의 border-right: none로 오른쪽에 있는 선을 지움</p>
+      <p>마찬가지로 h1태그 제목 아래에 있는 선을 지움 border-bottom: none</p>
          <img src = "sh.jpg" width = "400">
     </div>
   </div>
