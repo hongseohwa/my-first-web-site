@@ -3,65 +3,7 @@
 <head>
 <title>HSH - Welcome</title>
 <meta charset = "utf-8">
-<style>
-  body {
-    margin: 0;
-  }
-  a {
-    color: black;
-    text-decoration: none;
-  }
-  h1 {
-    text-align: center;
-    border-bottom:1px solid gray;
-    padding: 20px;
-    margin: 0;
-  }
-  h2, h3, p {
-    text-align: center;
-  }
-  #grid ol {
-    padding-left: 33px;
-  }
-  ol {
-    color: pink;
-    border-right: 1px solid gray;
-    width: 100px;
-    margin: 0;
-    padding: 20px;
-  }
-  #grid {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-  }
-  #article {
-    padding-left: 25px;
-  }
-  @media(min-width: 1200px) {
-    body {
-      background-color: red;
-    }
-  }
-  @media(max-width: 1200px) {
-    body {
-      background-color: blue;
-    }
-  }
-  @media(max-width: 800px) {
-    #grid {
-      display: block;
-     }
-    ol {
-      border-right: none;
-     }
-    h1 {
-      border-bottom: none;
-     }
-    body {
-      background-color: yellow;
-     }
-   }
-</style>
+<link rel ="stylesheet" href ="style.css">
 </head>
 <body>
   <h1><a href = "index.html">HSH</a></h1>
@@ -81,15 +23,17 @@
 </ol>
 -->
       <h2>HSH</h2>
-      <h2>2022-12-18</h2>
-      <h3>CSS 스터디 9일차</h3>
+      <h2>2022-12-19</h2>
+      <h3>CSS 스터디 10일차</h3>
       <p>나를 소개하는 웹사이트</p>
-      <p>반응형 웹, 반응형 웹 디자인(responsive web) - 화면 크기에 따라 웹 페이지의 각 요소들이 반응해서 최적화된 모양으로 바뀌는 것</p>
-      <p>미디어 쿼리 = @media라고 씀 / @media(min-width: 800px) = screen width > 800px</p>
-      <p>미디어 쿼리를 활용하면 특정 조건을 만족할 때만 미디어 쿼리의 코드를 동작시키는 것이 가능</p>
-      <p>위 코드 해석은 800픽셀보다 작을 때, grid부분을 grid부분이 아니게끔 display: block; 로 만듬</p>
-      <p>800픽셀보다 작을 때, ol태그의 border-right: none로 오른쪽에 있는 선을 지움</p>
-      <p>마찬가지로 h1태그 제목 아래에 있는 선을 지움 border-bottom: none</p>
+      <p>CSS코드의 재사용</p>
+      <p>style.css파일을 생성하고 style 태그의 내용 붙여넣기</p>
+      <p>link 태그, link태그를 통해 이 웹 페이지가 어떤 CSS파일과 연결돼 있는지 웹 브라우저에게 알려줌</p>
+      <p>"웹 브라우저야 이 위치에는 style.css라는 별도의 파일에 저장된 CSS를 내려받아서 원래 그 코드가 있었던 것처럼 동작해" 라는 말</p>
+      <p>link rel = "stylesheet" herf = "style.css /"</p>
+      <p>이전과 똑같이 작용하지만 내부적으로는 완전히 구현이 달라지며 훨씬 더 효율적인 상태가 됨</p>
+      <p>재사용성이 높아짐, 사용하는 입장에서 내부적인 코딩의 원리를 몰라도 사용할 수 있게 되니 사용성이 높아짐</p>
+      <p>캐싱(cache) = 저장한다는 뜻, style.css파일을 캐싱할 수 있게 되면 결국에는 훨씬 더 빠르게 웹 페이지를 보여줄 수 있으면서 네트워크 트래픽을 훨씬 더 적게 쓸 수 있다는 굉장히 신기하면서 중요한 효과를 얻을 수 있어서 가급적 CSS 파일을 별도로 만들어 중복을 제거하는 것을 추천</p>
          <img src = "sh.jpg" width = "400">
     </div>
   </div>
