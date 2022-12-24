@@ -4,15 +4,13 @@
 <title>HSH - Welcome</title>
 <meta charset = "utf-8">
 <link rel ="stylesheet" href ="style.css">
-</head>
-<body>
-  <h1><a href = "index.html">HSH</a></h1>
-  <input type = "button" value = "night" onclick = "
+<script>
+function nightDayHandler(self) {
   var target = document.querySelector('body');
-    if (this.value === 'night') {
+    if (self.value === 'night') {
       target.style.backgroundColor = 'black';
       target.style.color = 'white';
-      this.value = 'day';
+      self.value = 'day';
 
       var alist = document.querySelectorAll('a');
       var i = 0;
@@ -23,7 +21,7 @@
     } else {
       target.style.backgroundColor = 'white';
       target.style.color = 'black';
-      this.value = 'night';
+      self.value = 'night';
 
       var alist = document.querySelectorAll('a');
       var i = 0;
@@ -32,6 +30,13 @@
         i += 1;
       }
     }
+}
+</script>
+</head>
+<body>
+  <h1><a href = "index.html">HSH</a></h1>
+  <input type = "button" value = "night" onclick = "
+  nightDayHandler(this);
     ">
      <im
   <div id = "grid">
@@ -50,13 +55,13 @@
 </ol>
 -->
       <h2>HSH</h2>
-      <h2>2022-12-24</h2>
-      <h3>JS 스터디 15일차</h3>
+      <h2>2022-12-25</h2>
+      <h3>JS 스터디 16일차</h3>
       <p>나를 소개하는 웹사이트</p>
-      <p>배열(array) = 데이터 중에서 서로 연관된 데이터를 잘 정리 정돈해서 담아두는 일종의 수납 상자</p>
-      <p>배열 - 순서대로 연관된 데이터를 잘 정리 정돈하는 것</p>
-      <p>반복문 - 순서대로 배열에 담긴 데이터를 하나씩 꺼내서 자동화된 처리를 할 수 있는 문법</p>
-      <p>웹 페이지에 있는 모든 a 태그를 가져오고 alist 변수에 넣은 후 출력, 반복문으로 모든 링크 출력하고 글자색 변경(야간모드 하늘색, 주간모드 파란색)</p>
+      <p>function = 함수(수납상자) - 유지보수가 극단적으로 좋아짐</p>
+      <p>매개변수(parameter), 인자(argument) = 입력에 해당하는 것</p>
+      <p>nightDayHandler 함수 만들고 input 버튼의 자바스크립트 코드 넣기, onclick값으로 nightDayHandler 지정</p>
+      <p>this 인자를 self 매개변수로 받고 함수에서 this를 self로 변경</p>
       <img src = "sh.jpg" width = "400">
     </div>
   </div>
